@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $users = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
 
 foreach ($users as $user) {
-  if ($user['id] ==  $id) {
+  if ($user['id'] ==  $id) {
     echo "ID is registered";
     exit();
   }
