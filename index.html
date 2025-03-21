@@ -1,31 +1,30 @@
+<?php
+session_start();
+
+if (isset($_SESSION["role"])) {
+  if ($_SESSION["role"] == "FO") {
+    header("Location: dashboard_fo.php");
+  } elseif ($_SESSION["role"] == "CST" {
+    header("Location: dashboard_cst.php");
+  } else {
+    header("Location: dashboard_qa.php");
+  }
+  exit();
+}
+?>
+
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale1.0">
-  <title> PFCC </title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
 </head>
 <body>
-  <header>
-    <h1> TEST </h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="login.php">Login</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <h2>Welcome to the System</h2>
+  <p>Please Login or register to continue.</p>
 
-<main>
-  <section>
-    <h2>About Us</h2>
-    <p>This simple website bla bla bla</p>
-  </section>
-</main>
-
-<script> scr="script.js"></script>
+  <a href="login.php"><button>Login</button></a>
+  <a href="signup.php"><button>Signup</button></a>
 </body>
 </html>
